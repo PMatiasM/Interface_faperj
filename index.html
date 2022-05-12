@@ -25,9 +25,21 @@
                     <textarea name="statement"></textarea>
                 
                 </fieldset>
+
+                <fieldset id="questionImages">
+
+                    <legend>Imagens:
+                        <button id="addQuestionImage">+</button>
+                    </legend>
+
+                    <ul id="questionImagesList">
+
+                    </ul>
+
+                </fieldset>
         
                 <fieldset id="alternatives">
-                    <legend for="">Alternativas:</legend>
+                    <legend>Alternativas:</legend>
         
                     <div class="alternativesBox">
         
@@ -79,16 +91,18 @@
                         </ul>
                     </div>
                 </fieldset>
-                
-                
 
                 <fieldset id="difficulty">
                     <legend>Dificuldade:
                         <input id="difficultyRange" type="range" value="2" min="1" max="3" oninput="this.nextElementSibling.value = this.value">
                         <output id="difficultyOutput">2</output>
                     </legend>
-        
-        
+                </fieldset>
+
+                <fieldset id="source">
+                    <legend>Source:
+                        <input name="source" type="text">
+                    </legend>
                 </fieldset>
         
                 <button id="add">Adicionar</button>

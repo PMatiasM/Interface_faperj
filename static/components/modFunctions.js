@@ -1,5 +1,6 @@
 function clean() {
     document.querySelector("[name='statement']").value = "";
+    document.querySelector('#questionImagesList').innerHTML = "";
     for(const alternative of document.querySelectorAll("[name='alternatives']")) {
         if(alternative) {
             alternative.value = "";
@@ -35,4 +36,19 @@ function cancelEdit() {
     hide("cancel");
 }
 
-export { clean, hide, cleanList, cancelEdit };
+function addQuestionImage() {
+    const imagesList = document.querySelector('#questionImagesList');
+    if(imagesList.lastElementChild) {
+        if(imagesList.lastElementChild.lastElementChild.value === '') {
+            window.alert("Insert an image before adding another")
+            return;
+        }
+    }
+    const images = document.querySelectorAll('[name=questionImages]');
+    const item = document.createElement('li');
+    item.innerText = `URL ${ images.length + 1 }:`;
+    item.innerHTML += `<input name="questionImages" type="text">`;
+    imagesList.appendChild(item);
+}
+
+export { clean, hide, cleanList, cancelEdit, addQuestionImage };

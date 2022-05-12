@@ -1,7 +1,7 @@
 import { loadThemes, loadNames, loadImages } from "./components/loadFunctions.js";
 import { saveQuestion, saveEdit } from "./components/saveFunctions.js";
 import { sendTheme, sendList } from "./components/sendFunctions.js";
-import { hide, cancelEdit } from "./components/modFunctions.js";
+import { hide, cancelEdit, addQuestionImage } from "./components/modFunctions.js";
 
 (() => {
     
@@ -28,5 +28,8 @@ import { hide, cancelEdit } from "./components/modFunctions.js";
     
     const saveTheme = document.getElementById('addNewTheme');
     saveTheme.addEventListener('click', sendTheme);
+
+    const addQuestionImageBtn = document.querySelector('#addQuestionImage');
+    addQuestionImageBtn.addEventListener('click', addQuestionImage);
 
 })()
