@@ -44,7 +44,7 @@ async function sendCharacter(nameId, imageId) {
         },
         body: JSON.stringify({
             charName: nameId,
-            portraitPath: imageId
+            portraitURL: imageId
         })
     };
 
