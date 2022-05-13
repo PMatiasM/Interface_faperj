@@ -30,7 +30,7 @@ const Details = (list, theme, name, path, question) => {
                             </div>
                             <div class="detailsTCD">
                                 <h2>Fonte:</h2>
-                                <p>${question.questionImages}</p>
+                                <p>${question.source}</p>
                             </div>`;
     details.appendChild(DeleteButton(list));
     details.appendChild(EditButton(list));
