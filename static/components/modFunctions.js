@@ -40,16 +40,17 @@ function cancelEdit() {
 function addQuestionImage(event, url = null) {
     const imagesList = document.querySelector('#questionImagesList');
     if(imagesList.lastElementChild) {
-        if(imagesList.lastElementChild.lastElementChild.value === '') {
+        if(imagesList.lastElementChild.firstElementChild.value === '') {
             window.alert("Insert an image before adding another")
             return;
         }
     }
     const images = document.querySelectorAll('[name=questionImages]');
     const item = document.createElement('li');
-    item.innerText = `URL ${ images.length + 1 }:`;
-    item.innerHTML += `<input name="questionImages" type="text">`;
-    url ? item.lastElementChild.value = url : item.lastElementChild.value = '';
+    item.innerText = `URL:`;
+    item.innerHTML += `<input name="questionImages" type="text" autocomplete="off"> <button class="delQuestionImage">X</button>`;
+    item.lastElementChild.addEventListener('click', event => { event.currentTarget.parentElement.remove() })
+    url ? item.firstElementChild.value = url : item.firstElementChild.value = '';
     imagesList.appendChild(item);
 }
 
