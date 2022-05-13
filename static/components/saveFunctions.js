@@ -32,6 +32,7 @@ function saveEdit(event, list) {
     const oldRegister = document.querySelector(`[data-id="${id}"]`)
 
     const infos = verifyQuestion();
+    
     if(!infos) {
         return;
     };
@@ -63,6 +64,15 @@ function verifyQuestion() {
     if(prompt === '') {
         window.alert("The prompt cannot be null");
         return;
+    }
+
+    const questionImagesInputs = document.querySelectorAll("[name='questionImages']");
+    const questionImages = [];
+
+    for(const questionImage of questionImagesInputs) {
+        if(questionImage.value) {
+            questionImages.push(questionImage.value)
+        } 
     }
 
     const alternatives = document.querySelectorAll("[name='alternatives']");
@@ -124,13 +134,21 @@ function verifyQuestion() {
 
     const difficulty = document.querySelector("#difficultyRange").value;
 
+    const source = document.querySelector('[name=source]').value;
+    if(!source) {
+        window.alert("The source cannot be null")
+        return;
+    }
+
     const question = {
         prompt,
+        questionImages,
         answers,
         correct,
         themeId,
         characterId,
-        difficulty
+        difficulty,
+        source
     };
 
     const infos = {

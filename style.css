@@ -338,6 +338,16 @@ h3 + ul {
     width: auto;
 }
 
+#questionImagesDiv {
+    width: 100%;
+}
+
+#questionImagesDiv img {
+    width: 45%;
+    display: inline-block;
+    margin: 5px 1.5%;
+}
+
 .details ol {
     list-style: decimal;
     padding: revert;

@@ -1,12 +1,14 @@
 import { DeleteButton } from "./deleteButton.js";
 import { EditButton } from "./editButton.js";
 import { AnswersList } from "./answerList.js";
+import { QuestionImagesDiv } from "./questionImagesDiv.js";
 
 const Details = (list, theme, name, path, question) => {
     const details = document.createElement('div');
     details.classList.add('details');
     details.classList.add('hide');
     details.dataset.question = list.length - 1;
+    details.appendChild(QuestionImagesDiv(question))
     details.appendChild(AnswersList(question));
     details.innerHTML += `
                             <div class="horizontalDivisor"></div>
@@ -25,6 +27,10 @@ const Details = (list, theme, name, path, question) => {
                                 <h2>Dificuldade:</h2>
                                 <input id="difficultyRange" type="range" value="${question.difficulty}" min="1" max="3" oninput="this.nextElementSibling.value = this.value" disabled>
                                 <output id="difficultyOutput">${question.difficulty}</output>
+                            </div>
+                            <div class="detailsTCD">
+                                <h2>Fonte:</h2>
+                                <p>${question.questionImages}</p>
                             </div>`;
     details.appendChild(DeleteButton(list));
     details.appendChild(EditButton(list));

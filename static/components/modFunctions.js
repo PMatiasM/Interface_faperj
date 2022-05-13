@@ -15,6 +15,7 @@ function clean() {
 
     document.querySelector("#difficultyRange").value = 2;
     document.getElementById("difficultyOutput").innerText = 2;
+    document.querySelector('[name=source]').value = "";
 };
 
 function cleanList(list) {
