@@ -1,4 +1,4 @@
-import { hide } from "./modFunctions.js";
+import { addQuestionImage, hide } from "./modFunctions.js";
 
 const EditButton = (list) => {
     const editButton = document.createElement('img');
@@ -21,6 +21,7 @@ function editQuestion(event, list) {
     // const oldQuestion = list[id];
     
     const prompt = document.querySelector("[ name='statement' ]");
+    const questionImages = document.querySelector("#questionImagesList");
     const alternatives = document.querySelectorAll("[ name='alternatives' ]");
     const correct = document.querySelector("[ name='correct' ]");
     const themeSelect = document.querySelector("[ name='theme' ]");
@@ -28,6 +29,7 @@ function editQuestion(event, list) {
     const images = document.querySelectorAll("[ name='image' ]")
     const difficulty = document.querySelector("#difficultyRange");
     const difficultyOutput = document.querySelector("#difficultyOutput");
+    const source = document.querySelector("[ name='source' ]");
 
     const question = list[id];
 
@@ -35,6 +37,9 @@ function editQuestion(event, list) {
     for(let i=0; i<question.answers.length; i++) {
         alternatives[i].value = question.answers[i];
     };
+    for(const image of question.questionImages) {
+        addQuestionImage(null, image);
+    }
     correct.value = question.correct;
     themeSelect.value = question.themeId;
     nameSelect.value = question.characterId.nameId;
@@ -45,6 +50,7 @@ function editQuestion(event, list) {
     };
     difficulty.value = question.difficulty;
     difficultyOutput.value = question.difficulty;
+    source.value = question.source;
 
     saveButton.dataset.save = id;
 

@@ -37,7 +37,7 @@ function cancelEdit() {
     hide("cancel");
 }
 
-function addQuestionImage() {
+function addQuestionImage(event, url = null) {
     const imagesList = document.querySelector('#questionImagesList');
     if(imagesList.lastElementChild) {
         if(imagesList.lastElementChild.lastElementChild.value === '') {
@@ -49,6 +49,7 @@ function addQuestionImage() {
     const item = document.createElement('li');
     item.innerText = `URL ${ images.length + 1 }:`;
     item.innerHTML += `<input name="questionImages" type="text">`;
+    url ? item.lastElementChild.value = url : item.lastElementChild.value = '';
     imagesList.appendChild(item);
 }
 
