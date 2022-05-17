@@ -360,7 +360,7 @@ h3 + ul {
 
 .details ol li {
     margin: 10px 0;
-    padding: 0 10 0 0px;
+    padding: 0 10px 0 0;
 }
 
 .details ol li p {
