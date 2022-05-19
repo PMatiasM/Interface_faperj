@@ -3,7 +3,7 @@ import { addQuestionImage, hide } from "./modFunctions.js";
 const EditButton = (list) => {
     const editButton = document.createElement('img');
     editButton.classList.add('delEdit');
-    editButton.setAttribute('src', 'icons8-editar-120.png');
+    editButton.setAttribute('src', '../../images/icons8-editar-120.png');
     editButton.addEventListener('click', (event) => editQuestion(event, list));
     return editButton;
 };

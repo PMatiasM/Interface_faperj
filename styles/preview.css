@@ -1,0 +1,231 @@
+*{
+    font-family: 'IBM Plex Mono', monospace;
+    line-height: 1.5;
+}
+
+html {
+    /* No celular o main ficava menor que a tela, aí coloquei o bg-color em tudo para preencher */
+    background: #212121;
+}
+
+header {
+    background: #0c665d;
+}
+
+.logo {
+    display: inline-block;
+}
+
+.caixa {
+    display: block;
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.caixa > a {
+    position: absolute;
+    right: 20%;
+    top: 54px;
+    font-size: 22px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    color: #f8f9fa;
+}
+
+.caixa > a:hover {
+    color: #212529;
+    text-decoration: underline;
+}
+
+.principal {
+    width: 90%;
+    margin: 0 auto;
+    padding: 15px;
+    color: #f8f9fa;
+}
+
+.wrapper {
+    width: 100%;
+}
+
+.listDiv {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 90%;
+    margin: 25px auto;
+    background: #212529;
+    border: 1px #ced4da solid;
+    color: #f8f9fa;
+}
+
+.listDiv div {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+    padding: 1.125rem 2.5rem;
+    box-sizing: border-box;
+}
+
+.listDiv div h4, .listDiv div h1 {
+    font-weight: bold;
+    font-size: 25px;
+    text-transform: uppercase;
+    flex-grow: 1;
+}
+
+.listDiv img {
+    display: flex;
+    justify-content: flex-end;
+    width: 25px;
+    transition: 1s all;
+}
+
+.questionList {
+    width: 90%;
+    margin: 0 auto;
+    background: #212529;
+    border: 1px #ced4da solid;
+    margin-top: 20px;
+    color: #f8f9fa;
+}
+
+.questionWrapper {
+    width: 100%;
+}
+
+.registros {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 46.59%;
+    padding: 15px;
+    border: 2px #009688 solid;
+    background: #303030;
+    margin: 15px 1.5%;
+    vertical-align: top;
+}
+
+.registros p {
+    text-indent: 15px;
+    padding: 0 10px 0 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: justify;
+}
+
+.details {
+    margin: 20px 0 0 35px;
+    display: block;
+    width: auto;
+}
+
+#questionImagesDiv {
+    width: 100%;
+}
+
+#questionImagesDiv img {
+    width: 45%;
+    display: inline-block;
+    margin: 5px 1.5%;
+}
+
+.details ol {
+    list-style: decimal;
+    padding: revert;
+}
+
+.details ol li {
+    margin: 10px 0;
+    padding: 0 10px 0 0;
+}
+
+.details ol li p {
+    text-indent: 0;
+}
+
+.detailsTCD {
+    display: block;
+    width: auto;
+    padding: 10px;
+}
+
+.detailsTCD h2{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+}
+
+.detailsTCD input {
+    margin: 0 0 0 15px;
+}
+
+.detailsTCD h2 + div {
+    width: 25%;
+}
+
+.detailsTCD h2 + div img {
+    width: 100%;
+    margin: 10px 0;
+}
+
+.detailsTCD h2 + div p {
+    text-indent: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.rightAnswer {
+    color: #009688;
+}
+
+.hide {
+    display: none !important;
+}
+
+.delEdit {
+    margin: 0 5px;
+    float: right;
+    width: 35px;
+    cursor: pointer;
+}
+
+/* Menu CSS */
+
+.container {
+    float: left;
+    cursor: pointer;
+    width: 35px;
+    vertical-align: top;
+    margin: 0 10px 0 0;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #00645d;
+    margin: 6px 0;
+    transition: 0.4s;
+    display: block;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+    transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+    transform: rotate(45deg) translate(-8px, -8px) ;
+}
+
+.open {
+    transform: rotate(180deg);
+}

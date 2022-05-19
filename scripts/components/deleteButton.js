@@ -1,7 +1,7 @@
 const DeleteButton = (list) => {
     const deleteButton = document.createElement('img');
     deleteButton.classList.add('delEdit');
-    deleteButton.setAttribute('src', 'icons8-lixo-192.png');
+    deleteButton.setAttribute('src', '../../images/icons8-lixo-192.png');
     deleteButton.addEventListener('click', (event) => deleteQuestion(event, list));
     return deleteButton;
 };
