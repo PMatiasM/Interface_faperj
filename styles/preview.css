@@ -87,7 +87,7 @@ header {
     display: flex;
     justify-content: flex-end;
     width: 25px;
-    transition: 1s all;
+    transition: .5s all;
 }
 
 .questionList {
