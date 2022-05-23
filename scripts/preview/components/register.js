@@ -4,6 +4,7 @@ import { Details } from "./details.js";
 const Register = (listId, theme, name, path, question) => {
     const register = document.createElement('div');
     register.classList.add('registros');
+    register.classList.add('heightStandard');
     register.appendChild(Menu(listId, question.id))
     register.innerHTML += `<p>${question.prompt}</p>`;
     register.appendChild(Details(listId, theme, name, path, question));
@@ -14,6 +15,8 @@ const Register = (listId, theme, name, path, question) => {
 function hideDetails(event) {
     const menu = event.currentTarget;
     menu.classList.toggle('change');
+
+    menu.parentElement.classList.toggle('heightStandard');
 
     const detailsId = menu.dataset.menu
     const details = document.querySelector(`[data-question='${detailsId}']`);

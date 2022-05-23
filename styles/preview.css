@@ -120,6 +120,12 @@ header {
     color: #f8f9fa;
 }
 
+.heightStandard {
+    min-height: 120px;
+    max-height: 120px;
+    overflow: hidden;
+}
+
 .registros {
     display: inline-block;
     box-sizing: border-box;
